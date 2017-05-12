@@ -1,0 +1,58 @@
+{
+  "name": "@yaga/leaflet-ng2-gps",
+  "version": "0.0.1",
+  "description": "A GPS plugin for leaflet-ng2",
+  "main": "lib/index.js",
+  "scripts": {
+    "transpile": "ngc",
+    "lint": "tslint ts/*.ts",
+    "test": "npm run lint && npm run transpile && istanbul cover _mocha -- -- test/*.js",
+    "browser-test": "npm run transpile; browserify test/index.js -o browser-test/bundle.js",
+    "doc": "typedoc --out ./typedoc/ --exclude ts/tile-layer.directive.spec.ts --mode file ts/",
+    "build-example": "set -x && npm run transpile && cd example && tsc index.ts; browserify index.js -o bundle.js",
+    "dependency-check": "npm outdated && (node-dependencies || echo \"There are outdated sub-dependencies!\")"
+  },
+  "author": "Arne Schubert <atd.schubert@gmail.com>",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yagajs/leaflet-ng2-gps.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yagajs/leaflet-ng2-gps/issues"
+  },
+  "homepage": "https://github.com/yagajs/leaflet-ng2#readme",
+  "devDependencies": {
+    "@angular/common": "^4.0.2",
+    "@angular/compiler": "^4.0.2",
+    "@angular/compiler-cli": "^4.0.2",
+    "@angular/core": "^4.0.2",
+    "@angular/forms": "^4.0.2",
+    "@angular/platform-browser": "^4.0.2",
+    "@angular/platform-browser-dynamic": "^4.0.2",
+    "@types/chai": "^3.5.0",
+    "@types/leaflet": "^1.0.60",
+    "@types/mocha": "^2.2.40",
+    "@yaga/leaflet-ng2": "^1.0.0-rc4",
+    "bootstrap": "^3.3.7",
+    "browserify": "^14.3.0",
+    "chai": "^3.5.0",
+    "font-awesome": "^4.7.0",
+    "istanbul": "^0.4.5",
+    "jsdom": "^9.12.0",
+    "jsdom-global": "^2.1.1",
+    "leaflet": "^1.0.3",
+    "mocha": "^3.2.0",
+    "node-dependencies": "^0.3.1",
+    "reflect-metadata": "^0.1.10",
+    "rxjs": "^5.3.0",
+    "tslint": "^5.1.0",
+    "typedoc": "^0.5.10",
+    "typescript": "^2.2.2",
+    "zone.js": "^0.8.4"
+  },
+  "peerDependencies": {
+    "@angular/core": ">=2.0.0",
+    "@yaga/leaflet-ng2": "~1.0.0-rc5"
+  }
+}
