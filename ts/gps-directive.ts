@@ -70,13 +70,17 @@ export class GpsDirective implements AfterContentInit {
 
         if (val) {
             this.gpsService.start().catch((err: Error) => {
-                console.warn('TODO: handle Error!'); // TODO
+                // TODO: handle Error!
+                /* tslint:disable:no-console */
                 return console.error(err);
+                /* tslint:enable */
             });
         } else {
             this.gpsService.stop().catch((err: Error) => {
-                console.warn('TODO: handle Error!'); // TODO
+                // TODO: handle Error!
+                /* tslint:disable:no-console */
                 return console.error(err);
+                /* tslint:enable */
             });
         }
     }
