@@ -10,7 +10,7 @@
     "browser-test": "npm run transpile; browserify test/index.js -o browser-test/bundle.js",
     "doc": "typedoc --out ./typedoc/ --exclude ts/tile-layer.directive.spec.ts --mode file ts/",
     "build-example": "set -x && npm run transpile && cd example && tsc index.ts; browserify index.js -o bundle.js",
-    "dependency-check": "npm outdated && (node-dependencies || echo \"There are outdated sub-dependencies!\")"
+    "dependency-check": "npm outdated && npm audit"
   },
   "author": "Arne Schubert <atd.schubert@gmail.com>",
   "license": "ISC",
@@ -43,7 +43,6 @@
     "jsdom-global": "^3.0.2",
     "leaflet": "^1.0.3",
     "mocha": "^5.2.0",
-    "node-dependencies": "^0.3.1",
     "reflect-metadata": "^0.1.8",
     "rxjs": "^6.2.2",
     "rxjs-compat": "^6.2.2",
