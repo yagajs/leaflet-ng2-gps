@@ -5,21 +5,21 @@ import {
     Inject,
     Input,
     QueryList,
-} from '@angular/core';
+} from "@angular/core";
 import {
     CircleDirective,
     CircleMarkerDirective,
     MarkerDirective,
-} from '@yaga/leaflet-ng2';
+} from "@yaga/leaflet-ng2";
 
-import { GpsService } from './gps-service';
+import { GpsService } from "./gps-service";
 
 /**
  * GPS component
  * TODO: @example https://leaflet-ng2.yagajs.org/latest/examples/tile-layer-directive
  */
 @Directive({
-    selector: 'yaga-gps',
+    selector: "yaga-gps",
 })
 export class GpsDirective implements AfterContentInit {
     /**
