@@ -1,6 +1,6 @@
 {
   "name": "@yaga/leaflet-ng2-gps",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A GPS plugin for leaflet-ng2",
   "main": "lib/index.js",
   "scripts": {
