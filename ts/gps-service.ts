@@ -1,7 +1,7 @@
 import {
     EventEmitter,
     Injectable,
-} from '@angular/core';
+} from "@angular/core";
 
 @Injectable()
 export class GpsService {
